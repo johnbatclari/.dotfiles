@@ -20,9 +20,12 @@ alias t=task
 # export STARSHIP_CONFIG=~/.config/starship-gruvbox.toml
 eval "$(starship init zsh)"
 
+zle -N menu-search
+zle -N recent-paths
+
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $(brew --prefix)/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
